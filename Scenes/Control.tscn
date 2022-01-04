@@ -1,0 +1,75 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Scripts/MAIN.gd" type="Script" id=1]
+[ext_resource path="res://background.png" type="Texture" id=2]
+
+[node name="Control" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Background" type="Sprite" parent="."]
+position = Vector2( 960, 536 )
+scale = Vector2( 1.0037, 1.0037 )
+texture = ExtResource( 2 )
+
+[node name="Track" type="Label" parent="."]
+light_mask = 2
+margin_left = 792.0
+margin_top = 320.0
+margin_right = 1192.0
+margin_bottom = 472.0
+text = "0
+"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CCC" type="ColorRect" parent="Track"]
+show_behind_parent = true
+margin_right = 400.0
+margin_bottom = 152.0
+color = Color( 0.517647, 0.317647, 0.317647, 1 )
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="Button1" type="Button" parent="."]
+margin_left = 504.0
+margin_top = 576.0
+margin_right = 703.0
+margin_bottom = 768.0
+text = "+1"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button2" type="Button" parent="."]
+margin_left = 888.0
+margin_top = 576.0
+margin_right = 1087.0
+margin_bottom = 768.0
+text = "+2"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button3" type="Button" parent="."]
+margin_left = 1280.0
+margin_top = 576.0
+margin_right = 1472.0
+margin_bottom = 768.0
+text = "+3"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[connection signal="pressed" from="Button1" to="." method="_on_Button_pressed"]
+[connection signal="pressed" from="Button2" to="." method="_on_Button2_pressed"]
+[connection signal="pressed" from="Button3" to="." method="_on_Button3_pressed"]
