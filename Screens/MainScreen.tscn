@@ -46,7 +46,7 @@ __meta__ = {
 }
 
 [node name="StartButton" parent="VBoxContainer" instance=ExtResource( 1 )]
-next_scene_path = "res://Scenes/Control.tscn"
+next_scene_path = "res://Scenes/One_pile.tscn"
 
 [node name="BackButton" parent="VBoxContainer" instance=ExtResource( 2 )]
 anchor_left = 0.0
