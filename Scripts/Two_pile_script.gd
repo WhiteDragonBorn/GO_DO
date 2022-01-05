@@ -3,6 +3,8 @@ extends Control
 
 var rng = RandomNumberGenerator.new()
 
+onready var ROCKS = [get_node("Rocks1"),
+					 get_node("Rocks2")]
 
 onready var BGC = [ get_node("TrackCont/Track1/CCC_1"),
 					get_node("TrackCont/Track2/CCC_2")] 
@@ -21,9 +23,9 @@ onready var TURN = get_node("Turn") # Узел ходов
 var turn_num = 1					# Счётчик ходов
 
 func _ready(): # Загрузка игры
-	rng.randomize()	# Обновляем наш рандомайзер (иначе одно и то же выдаёт)
-	var randint = rng.randi_range(1,20)
 	for i in range(2):
+		rng.randomize()
+		var randint = rng.randi_range(1,20)
 		SCORES[i].set_text(str(randint)) # Главный счётчик игры (куча камней)
 
 func _on_Button_pressed():
@@ -55,6 +57,7 @@ func _process(_delta): # Функция real-time, вызывается кажд
 		for i in range(2):
 			SCORES[i].hide()
 			BGC[i].hide()
+			ROCKS[i].hide()
 		
 		for i in range(len(BTNS)): # Закрываем также все кнопки
 			BTNS[i].hide()

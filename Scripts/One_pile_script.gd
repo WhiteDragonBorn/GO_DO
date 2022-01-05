@@ -2,6 +2,7 @@ extends Control
 
 var rng = RandomNumberGenerator.new()
 
+onready var ROCK = get_node("Rocks")
 onready var BGC = get_node("Track/CCC")
 onready var SCORE = get_node("Track")
 onready var BTNS = [get_node("Button1"), 
@@ -47,6 +48,7 @@ func _process(_delta): # Функция real-time, вызывается кажд
 	if int(SCORE.text) >= 30:     # Если >= 30 игра завершается
 		BGC.hide()
 		SCORE.hide()
+		ROCK.hide()
 		
 		for i in range(len(BTNS)): # Закрываем также все кнопки
 			BTNS[i].hide()

@@ -1,0 +1,93 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://sad rock.png" type="Texture" id=1]
+[ext_resource path="res://just rock.png" type="Texture" id=2]
+
+[node name="Rocks" type="Control"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -20.0
+margin_top = -20.0
+margin_right = 20.0
+margin_bottom = 20.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect" type="TextureRect" parent="."]
+margin_left = -202.0
+margin_top = -94.0
+margin_right = -74.0
+margin_bottom = 34.0
+texture = ExtResource( 2 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect3" type="TextureRect" parent="."]
+margin_left = -99.0
+margin_top = -86.0
+margin_right = 29.0
+margin_bottom = 42.0
+texture = ExtResource( 2 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect2" type="TextureRect" parent="."]
+margin_left = -145.0
+margin_top = -140.0
+margin_right = -17.0
+margin_bottom = -12.0
+texture = ExtResource( 2 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect4" type="TextureRect" parent="."]
+margin_left = -6.0
+margin_top = -84.0
+margin_right = 122.0
+margin_bottom = 44.0
+texture = ExtResource( 2 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect5" type="TextureRect" parent="."]
+margin_left = -60.0
+margin_top = -138.0
+margin_right = 68.0
+margin_bottom = -10.0
+texture = ExtResource( 2 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect6" type="TextureRect" parent="."]
+margin_left = 65.0
+margin_top = -74.0
+margin_right = 193.0
+margin_bottom = 54.0
+texture = ExtResource( 1 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect7" type="TextureRect" parent="."]
+margin_left = 33.0
+margin_top = -128.0
+margin_right = 161.0
+texture = ExtResource( 2 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}

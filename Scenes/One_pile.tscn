@@ -1,10 +1,16 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://UI/StartButton.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Scripts/One_pile_script.gd" type="Script" id=2]
 [ext_resource path="res://new_theme.tres" type="Theme" id=3]
 [ext_resource path="res://background.png" type="Texture" id=4]
 [ext_resource path="res://btns_theme.tres" type="Theme" id=5]
+[ext_resource path="res://Roboto-Bold.ttf" type="DynamicFontData" id=6]
+[ext_resource path="res://UI/Rocks.tscn" type="PackedScene" id=7]
+
+[sub_resource type="DynamicFont" id=1]
+size = 36
+font_data = ExtResource( 6 )
 
 [node name="One_pile" type="Control"]
 anchor_right = 1.0
@@ -20,16 +26,26 @@ position = Vector2( 960, 536 )
 scale = Vector2( 1.0037, 1.0037 )
 texture = ExtResource( 4 )
 
+[node name="Rocks" parent="." instance=ExtResource( 7 )]
+margin_left = -4.0
+margin_top = 33.0
+margin_right = 36.0
+margin_bottom = 73.0
+
 [node name="Track" type="Label" parent="."]
 light_mask = 2
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-margin_left = -200.0
-margin_top = -76.0
-margin_right = 200.0
-margin_bottom = 76.0
+margin_left = -201.0
+margin_top = -77.0
+margin_right = 199.0
+margin_bottom = 75.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_outline_modulate = Color( 0.521569, 0.203922, 0.203922, 1 )
+custom_colors/font_color_shadow = Color( 0.960784, 0.207843, 0.207843, 1 )
+custom_fonts/font = SubResource( 1 )
 text = "0
 "
 align = 1
@@ -39,12 +55,12 @@ __meta__ = {
 }
 
 [node name="CCC" type="ColorRect" parent="Track"]
+visible = false
 show_behind_parent = true
 margin_right = 400.0
 margin_bottom = 152.0
 color = Color( 0.517647, 0.317647, 0.317647, 1 )
 __meta__ = {
-"_edit_lock_": true,
 "_edit_use_anchors_": false
 }
 
