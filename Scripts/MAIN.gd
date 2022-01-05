@@ -16,7 +16,7 @@ var turn_num = 1					# Счётчик ходов
 
 func _ready(): # Загрузка игры
 	rng.randomize()	# Обновляем наш рандомайзер (иначе одно и то же выдаёт)
-	var randint = rng.randi_range(1,20)
+	var randint = rng.randi_range(0,35)
 	SCORE.set_text(str(randint)) # Главный счётчик игры (куча камней)
 
 func _on_Button_pressed():
@@ -33,7 +33,7 @@ func _on_Button2_pressed():
 	
 func _on_Button3_pressed():
 	BGC.color = Color(rng.randf(), rng.randf(), rng.randf(),0.5)
-	var num = int(SCORE.get_text()) + int(BTNS[3-1].get_text()[1])
+	var num = int(SCORE.get_text()) * int(BTNS[3-1].get_text()[1])
 	SCORE.set_text(str(num))
 	turn_num+=1
 	
@@ -44,7 +44,7 @@ func _process(_delta): # Функция real-time, вызывается кажд
 	else:
 		TURN.text = "Vanya's Turn"	
 	
-	if int(SCORE.text) >= 30:     # Если >= 30 игра завершается
+	if int(SCORE.text) >= 36:     # Если >= 30 игра завершается
 		BGC.hide()
 		SCORE.hide()
 		
