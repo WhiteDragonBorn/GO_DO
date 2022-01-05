@@ -1,0 +1,105 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://UI/StartButton.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Scripts/MAIN.gd" type="Script" id=2]
+[ext_resource path="res://new_theme.tres" type="Theme" id=3]
+[ext_resource path="res://background.png" type="Texture" id=4]
+
+[node name="One_pile" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+theme = ExtResource( 3 )
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Background" type="Sprite" parent="."]
+position = Vector2( 960, 536 )
+scale = Vector2( 1.0037, 1.0037 )
+texture = ExtResource( 4 )
+
+[node name="Track" type="Label" parent="."]
+light_mask = 2
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -200.0
+margin_top = -76.0
+margin_right = 200.0
+margin_bottom = 76.0
+text = "0
+"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CCC" type="ColorRect" parent="Track"]
+show_behind_parent = true
+margin_right = 400.0
+margin_bottom = 152.0
+color = Color( 0.517647, 0.317647, 0.317647, 1 )
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="Button1" type="Button" parent="."]
+margin_left = 504.0
+margin_top = 752.0
+margin_right = 703.0
+margin_bottom = 944.0
+text = "+1"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button2" type="Button" parent="."]
+margin_left = 888.0
+margin_top = 754.0
+margin_right = 1087.0
+margin_bottom = 946.0
+text = "+2"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button3" type="Button" parent="."]
+margin_left = 1280.0
+margin_top = 753.0
+margin_right = 1472.0
+margin_bottom = 945.0
+text = "+3"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Turn" type="Label" parent="."]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -74.0
+margin_top = 232.0
+margin_right = 74.0
+margin_bottom = 280.0
+text = "Vanya's Turn"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="StartButton" parent="." instance=ExtResource( 1 )]
+visible = false
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -240.0
+margin_top = 761.0
+margin_right = 240.0
+margin_bottom = 919.0
+text = "back"
+next_scene_path = "res://Screens/MainScreen.tscn"
+
+[connection signal="pressed" from="Button1" to="." method="_on_Button_pressed"]
+[connection signal="pressed" from="Button2" to="." method="_on_Button2_pressed"]
+[connection signal="pressed" from="Button3" to="." method="_on_Button3_pressed"]
