@@ -8,6 +8,8 @@ onready var BTNS = [get_node("Button1"),
 					get_node("Button2"),
 					get_node("Button3")] # Кнопки помещены в список, чтобы
 										 # их легче было перебирать все сразу 
+										
+onready var MAIN_MENU = get_node("StartButton")
 
 onready var TURN = get_node("Turn") # Узел ходов
 var turn_num = 1					# Счётчик ходов
@@ -35,6 +37,7 @@ func _on_Button3_pressed():
 	SCORE.set_text(str(num))
 	turn_num+=1
 	
+
 func _process(_delta): # Функция real-time, вызывается каждый frame
 	if turn_num % 2 != 0:         # Чётные - Ваня, Нечёт - Петя
 		TURN.text = "Petya's Turn"
@@ -52,4 +55,11 @@ func _process(_delta): # Функция real-time, вызывается кажд
 			TURN.text = "Vanya WINS"      # смену хода => у нас обратная зависимость
 		else:
 			TURN.text = "Petya WINS"
+			
+		MAIN_MENU.show()
+	
 		
+		
+		
+		
+
